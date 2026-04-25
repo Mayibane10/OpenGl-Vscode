@@ -89,12 +89,6 @@ int main()
 {
     glfwInit(); // initilize glfw
 
-    // include the shaders
-    GLuint shaderProgram = createShaderProgram("shaders/vertex.glsl", "shaders/fragment.glsl");
-
-    // use shaders
-    glUseProgram(shaderProgram);
-
     // specify OpenGl version
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
@@ -116,6 +110,16 @@ int main()
 
     // specify the veiwport of the window
     glViewport(0, 0, screen_width, screen_height);
+
+    // == Shaders ==
+
+    // include the shaders
+    // GLuint shaderProgram = createShaderProgram("shaders/vertex.glsl", "shaders/fragment.glsl");
+
+    // use shaders
+    // glUseProgram(shaderProgram);
+
+    // === Shaders ==
 
     // set the bacground color
     glClearColor(0.07, 0.13, 0.17, 1);
